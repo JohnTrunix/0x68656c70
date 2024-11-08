@@ -2,6 +2,7 @@ import { defineConfig, HeadConfig, type DefaultTheme } from 'vitepress';
 
 export default defineConfig({
 	lang: 'en-US',
+	base: '/0x68656c70/',
 	head: headers(),
 	title: '0x68656c70',
 	description: 'help - Notes about technical stuff I wish I had before.',
@@ -11,8 +12,8 @@ export default defineConfig({
 
 	themeConfig: {
 		logo: {
-			light: '/assets/logo.svg',
-			dark: '/assets/logo-dark.svg',
+			light: '/logo.svg',
+			dark: '/logo-dark.svg',
 		},
 
 		nav: nav(),
@@ -105,12 +106,12 @@ function sidebarK8s(): DefaultTheme.SidebarItem[] {
 /* prettier-ignore */
 function headers(): HeadConfig[] {
   return [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'assets/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'Insights on cloud, devops and related topics' }],
     ['meta', { property: 'og:site_name', content: '0x68656c70 - help' }],
-    ['meta', { property: 'og:image', content: '' }],
+    // ['meta', { property: 'og:image', content: '' }],
     ['meta', { property: 'og:url', content: 'https://github.com/johntrunix/0x68656c70' }],
   ];
 }

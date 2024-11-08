@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -7,8 +6,8 @@ hero:
   text: 'Insights I wish I had earlier'
   tagline: Insights on Cloud, DevOps and related Topics
   image:
-    light: assets/hero.svg
-    dark: assets/hero-dark.svg
+    light: /hero.svg
+    dark: /hero-dark.svg
     alt: Growth
   actions:
     - theme: brand
@@ -35,7 +34,7 @@ features:
 
 <style>
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff) !important;
 }
 </style>
