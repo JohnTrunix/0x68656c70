@@ -1,8 +1,12 @@
 import { defineConfig, HeadConfig, type DefaultTheme } from 'vitepress';
 
 export default defineConfig({
-	lang: 'en-US',
 	base: '/0x68656c70/',
+	sitemap: {
+		hostname: 'http://localhost:5173/0x68656c70/',
+	},
+
+	lang: 'en-US',
 	head: headers(),
 	title: '0x68656c70',
 	description: 'help - Notes about technical stuff I wish I had before.',
@@ -31,6 +35,13 @@ export default defineConfig({
 		editLink: {
 			pattern: 'https://github.com/johntrunix/0x68656c70/edit/main/:path',
 			text: 'Edit this page on GitHub',
+		},
+	},
+
+	markdown: {
+		math: true,
+		image: {
+			lazyLoading: true,
 		},
 	},
 });
