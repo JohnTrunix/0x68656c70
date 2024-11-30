@@ -1,50 +1,54 @@
 import { defineConfig, HeadConfig, type DefaultTheme } from 'vitepress';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 
-export default defineConfig({
-	base: '/0x68656c70/',
-	sitemap: {
-		hostname: 'http://localhost:5173/0x68656c70/',
-	},
-
-	lang: 'en-US',
-	head: headers(),
-	title: '0x68656c70',
-	description: 'help - Notes about technical stuff I wish I had before.',
-
-	lastUpdated: true,
-	cleanUrls: true,
-
-	themeConfig: {
-		logo: {
-			light: '/logo.svg',
-			dark: '/logo-dark.svg',
+export default withMermaid(
+	defineConfig({
+		base: '/0x68656c70/',
+		sitemap: {
+			hostname: 'http://localhost:5173/0x68656c70/',
 		},
 
-		nav: nav(),
-		sidebar: {
-			'/general/': sidebarGeneral(),
-			'/aws/': sidebarAWS(),
-			'/k8s/': sidebarK8s(),
+		lang: 'en-US',
+		head: headers(),
+		title: '0x68656c70',
+		description: 'help - Notes about technical stuff I wish I had before.',
+
+		lastUpdated: true,
+		cleanUrls: true,
+
+		themeConfig: {
+			logo: {
+				light: '/logo.svg',
+				dark: '/logo-dark.svg',
+			},
+
+			nav: nav(),
+			sidebar: {
+				'/general/': sidebarGeneral(),
+				'/aws/': sidebarAWS(),
+				'/k8s/': sidebarK8s(),
+			},
+			outline: 'deep',
+
+			search: {
+				provider: 'local',
+			},
+
+			socialLinks: [{ icon: 'github', link: 'https://github.com/johntrunix/0x68656c70' }],
+			editLink: {
+				pattern: 'https://github.com/johntrunix/0x68656c70/edit/main/:path',
+				text: 'Edit this page on GitHub',
+			},
 		},
 
-		search: {
-			provider: 'local',
+		markdown: {
+			math: true,
+			image: {
+				lazyLoading: true,
+			},
 		},
-
-		socialLinks: [{ icon: 'github', link: 'https://github.com/johntrunix/0x68656c70' }],
-		editLink: {
-			pattern: 'https://github.com/johntrunix/0x68656c70/edit/main/:path',
-			text: 'Edit this page on GitHub',
-		},
-	},
-
-	markdown: {
-		math: true,
-		image: {
-			lazyLoading: true,
-		},
-	},
-});
+	})
+);
 
 function nav(): DefaultTheme.NavItem[] {
 	return [
@@ -62,9 +66,9 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
 		{
 			text: 'Networking',
 			items: [
-				{ text: 'IP Addressing', link: '/general/ip' },
 				{ text: 'Networking', link: '/general/networking' },
 				{ text: 'DNS', link: '/general/dns' },
+				{ text: 'CA and TLS', link: '/general/ca-tls' },
 			],
 		},
 	];
