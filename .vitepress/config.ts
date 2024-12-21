@@ -3,7 +3,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid';
 
 export default withMermaid(
 	defineConfig({
-		base: '/0x68656c70/',
+		base: '/',
 		sitemap: {
 			hostname: 'http://localhost:5173/0x68656c70/',
 		},
