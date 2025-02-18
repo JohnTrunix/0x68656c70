@@ -71,6 +71,13 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
 				{ text: 'CA and TLS', link: '/general/ca-tls' },
 			],
 		},
+		{
+			text: 'Authentication',
+			items: [
+				{ text: 'Session Token', link: '/general/session' },
+				{ text: 'Json Web Token (JWT)', link: '/general/jwt' },
+			],
+		},
 	];
 }
 
