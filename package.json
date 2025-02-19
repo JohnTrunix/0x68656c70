@@ -5,6 +5,7 @@
   "homepage": "https://help.scriptor.dev/",
   "author": "JohnTrunix",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:JohnTrunix/0x68656C70.git"

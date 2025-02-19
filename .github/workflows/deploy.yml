@@ -22,16 +22,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Pages 📄
-        uses: actions/configure-pages@v4
-
       - name: Setup Node 🟩
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
+          cache: yarn
+
+      - name: Setup Pages 📄
+        uses: actions/configure-pages@v4
 
       - name: Install dependencies 📦
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Lint 🧹
         run: |
