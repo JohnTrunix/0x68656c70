@@ -1,0 +1,9 @@
+default: true
+ul-style:
+  style: asterisk
+ul-indent:
+  indent: 4
+line-length:
+  line_length: 200
+code-block-style:
+  style: fenced

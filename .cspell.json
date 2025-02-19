@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+	"version": "0.2",
+	"dictionaryDefinitions": [
+		{
+			"name": "project-words",
+			"path": "./.cspell-words.txt",
+			"addWords": true
+		}
+	],
+	"dictionaries": ["project-words"],
+	"ignorePaths": ["./.cspell-words.txt"],
+	"useGitignore": true,
+	"caseSensitive": true,
+	"reporters": ["default", ["@cspell/cspell-json-reporter", { "outFile": "out.json" }]],
+	"patterns": [
+		{
+			"name": "markdown_code_block",
+			"pattern": "^([A-Za-z \t]*)```([A-Za-z]*)?\\n([\\s\\S]*?)```([A-Za-z \t]*)*$"
+		},
+		{
+			"name": "markdown_inline_code_block",
+			"pattern": "`([^`\n\r]+)`"
+		},
+		{
+			"name": "markdown_html_div_block",
+			"pattern": "<div([\\s\\S]*?)<\\/div>"
+		},
+		{
+			"name": "markdown_html_comment_block",
+			"pattern": "<!--([\\s\\S]*?)-->"
+		}
+	],
+	"languageSettings": [
+		{
+			"languageId": "markdown",
+			"ignoreRegExpList": [
+				"markdown_code_block",
+				"markdown_inline_code_block",
+				"markdown_html_div_block",
+				"markdown_html_comment_block"
+			]
+		}
+	]
+}

@@ -2,8 +2,8 @@
 
 DNS is a system that translates domain names to IP addresses. This is used to route traffic via an human readable name to an ip address.
 
-- DNS names are only used for human readability
-- Servers use IP addresses to communicate with each other
+* DNS names are only used for human readability
+* Servers use IP addresses to communicate with each other
 
 ```mermaid
 sequenceDiagram
@@ -18,9 +18,10 @@ sequenceDiagram
 
 ```
 
-### Zones
+## Zones
 
-A DNS zone is a segment of the domain namespace managed by a specific organization or administrator. It consists of a collection of DNS records maintained by a DNS server. Zones enable different parts of a domain to be managed by separate DNS servers, providing flexibility and delegation in domain administration.
+A DNS zone is a segment of the domain namespace managed by a specific organization or administrator. It consists of a collection of DNS records maintained by a DNS
+server. Zones enable different parts of a domain to be managed by separate DNS servers, providing flexibility and delegation in domain administration.
 
 ## DNS Records
 
@@ -30,17 +31,17 @@ DNS records are used to store information about a domain in a DNS zone file. Gen
 <name> <ttl> <class> <type> <rdata>
 ```
 
-- `<name>`: the domain or subdomain
-- `<ttl>`: time to live (how long the record is cached)
-- `<class>`: the class of the record (IN for internet)
-- `<type>`: the type of record (A for address)
-- `<rdlength>`: length of the rdata field (internaly used)
-- `<rdata>`: the IP address or data associated with the record
+* `<name>`: the domain or subdomain
+* `<ttl>`: time to live (how long the record is cached)
+* `<class>`: the class of the record (IN for internet)
+* `<type>`: the type of record (A for address)
+* `<rdlength>`: length of the rdata field (internal use)
+* `<rdata>`: the IP address or data associated with the record
 
 > [!INFO]
 >
-> - `<ttl>`, `<class>` and `<type>` are optional fields. If not specified, they will be set to default values.
-> - `<rdlength>` is an internal field
+> * `<ttl>`, `<class>` and `<type>` are optional fields. If not specified, they will be set to default values.
+> * `<rdlength>` is an internal field
 
 ### A and AAAA Records
 
@@ -89,10 +90,11 @@ The number (`10`, `20`) in the MX record is the priority of the mail server. Low
 
 ### Other Records
 
-- **SOA Record**: Start of Authority record is used to specify the authoritative DNS server for a domain.
-- **TXT Record**: Text record is used to store arbitrary text data.
-- **PTR Record**: Pointer record is used for reverse DNS lookups.
-- **CAA Record**: Certificate Authority Authorization record is used to specify which certificate authorities are allowed to issue certificates for a domain.
-  ```text
-  example.com CAA 0 issue "letsencrypt.org"
-  ```
+* **SOA Record**: Start of Authority record is used to specify the authoritative DNS server for a domain.
+* **TXT Record**: Text record is used to store arbitrary text data.
+* **PTR Record**: Pointer record is used for reverse DNS lookups.
+* **CAA Record**: Certificate Authority Authorization record is used to specify which certificate authorities are allowed to issue certificates for a domain.
+  
+```text
+example.com CAA 0 issue "letsencrypt.org"
+```
