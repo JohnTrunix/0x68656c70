@@ -41,6 +41,7 @@ export default withMermaid(
 			},
 		},
 
+    ignoreDeadLinks: "localhostLinks",
 		markdown: {
 			math: true,
 			image: {
