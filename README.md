@@ -1,35 +1,25 @@
 # 0x68656c70
 
-Insights on Cloud, DevOps and related Topics, I wish I had earlier. All notes are written by me. I do not take any responsibility for the correctness of the content.
+Personal notes about cloud, infrastructure, DevOps, and other tech stuff I love.
 
 ## Development
 
-Install dependencies:
+Install dependencies and start local server on [localhost:5173](http://localhost:5173):
 
 ```bash
 yarn install
-```
-
-Start local server:
-
-```bash
 yarn start
 ```
 
-* Visit [localhost:5173](http://localhost:5173)
-
-Linting:
+To keep the notes clean and consistent:
 
 ```bash
-# everything
 yarn lint
-
-# commit
 yarn lint:commit
-
-# markdown
 yarn lint:markdown
-
-# spelling
 yarn lint:cspell
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).

@@ -1,1 +1,0 @@
-# VPC - Virtual Private Cloud

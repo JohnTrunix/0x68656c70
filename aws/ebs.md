@@ -1,1 +1,0 @@
-# EBS - Elastic Block Store

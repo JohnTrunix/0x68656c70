@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: '0x68656c70'
-  text: 'Insights I wish I had earlier'
-  tagline: Insights on Cloud, DevOps and related Topics
+  name: "0x68656c70"
+  text: "help - Notes"
+  tagline: Personal notes about tech stuff and things I love
   image:
     light: /hero.svg
     dark: /hero-dark.svg
@@ -12,24 +12,24 @@ hero:
   actions:
     - theme: brand
       text: General
-      link: /general
+      link: /general/dns
+    - theme: brand
+      text: Infrastructure
+      link: /infrastructure/datastores/postgres
     - theme: alt
-      text: AWS
-      link: /aws
-    - theme: alt
-      text: Kubernetes
-      link: /k8s
+      text: Github
+      link: https://github.com/JohnTrunix/0x68656c70
 
 features:
   - title: Personal Notes
     icon: 📝
-    details: Simple, personal notes on Cloud, DevOps, and related topics. I keep them short and easy to understand for quick and efficient takeaways.
-  - title: Cloud Insights
+    details: Simple, personal notes on Cloud, DevOps, and related topics.
+  - title: Topics
     icon: ☁️
-    details: Focused notes on cloud technologies, primarily AWS, with clear and actionable takeaways for my own learning.
-  - title: Library
+    details: Focused notes on cloud technologies, infrastructure and related topics.
+  - title: Collection
     icon: 📚
-    details: A small collection of references and resources I use to look things up. I keep it here to make it easier for me and others to access it.
+    details: A small collection of references and resources I use to look things up.
 ---
 
 <style>
